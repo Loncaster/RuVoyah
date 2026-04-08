@@ -21,12 +21,9 @@ jobs:
     outputs:
       command_matched: ${{ steps.pr.outputs.command_matched }}
       allowed: ${{ steps.pr.outputs.allowed }}
-      skip_reason: ${{ steps.pr.outputs.skip_reason }}
       pr_number: ${{ steps.pr.outputs.pr_number }}
       head_repo: ${{ steps.pr.outputs.head_repo }}
       head_ref: ${{ steps.pr.outputs.head_ref }}
-      head_sha: ${{ steps.pr.outputs.head_sha }}
-      pr_author: ${{ steps.pr.outputs.pr_author }}
 
     steps:
       - name: Read PR metadata
@@ -43,7 +40,6 @@ jobs:
 
             if (commentBody !== '/build') {
               core.setOutput('allowed', 'false');
-              core.setOutput('skip_reason', '');
               return;
             }
 
@@ -59,14 +55,6 @@ jobs:
             core.setOutput('pr_number', String(pr.number));
             core.setOutput('head_repo', pr.head.repo.full_name);
             core.setOutput('head_ref', pr.head.ref);
-            core.setOutput('head_sha', pr.head.sha);
-            core.setOutput('pr_author', pr.user.login);
-            core.setOutput(
-              'skip_reason',
-              allowed
-                ? ''
-                : `Preview build can only be requested by @${pr.user.login} or @${repoOwner}.`
-            );
 
   build:
     needs: prepare
@@ -111,62 +99,3 @@ jobs:
           path: ${{ runner.temp }}/out/*.zip
           retention-days: 14
 
-  report:
-    needs:
-      - prepare
-      - build
-    if: ${{ always() && needs.prepare.outputs.command_matched == 'true' }}
-    runs-on: ubuntu-latest
-
-    permissions:
-      issues: write
-
-    steps:
-      - name: Post PR comment
-        uses: actions/github-script@v7
-        env:
-          BUILD_RESULT: ${{ needs.build.result }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          PR_NUMBER: ${{ needs.prepare.outputs.pr_number }}
-          PR_AUTHOR: ${{ needs.prepare.outputs.pr_author }}
-          SKIP_REASON: ${{ needs.prepare.outputs.skip_reason }}
-        with:
-          script: |
-            const prNumber = Number(process.env.PR_NUMBER || context.payload.issue.number);
-            const buildResult = process.env.BUILD_RESULT || 'skipped';
-            const runUrl = process.env.RUN_URL;
-            const skipReason = process.env.SKIP_REASON || '';
-            const prAuthor = process.env.PR_AUTHOR || 'PR author';
-
-            let body = '';
-
-            if (skipReason) {
-              body = `${skipReason}\n\nIf you are the PR author, use the \`/build\` command in this PR to start a preview package build.`;
-            } else if (buildResult === 'success') {
-              body = [
-                `Preview package for PR #${prNumber} is ready.`,
-                '',
-                `Open the workflow run to download the artifact: ${runUrl}`,
-                '',
-                `The archive is built from the current PR branch and is not published to GitHub Releases.`
-              ].join('\n');
-            } else if (buildResult === 'failure') {
-              body = [
-                `Preview package build for PR #${prNumber} failed.`,
-                '',
-                `Open the workflow run for details: ${runUrl}`
-              ].join('\n');
-            } else {
-              body = [
-                `Preview package build for PR #${prNumber} was not started.`,
-                '',
-                `Only @${prAuthor} or @${context.repo.owner} can start it with the \`/build\` command.`
-              ].join('\n');
-            }
-
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              body
-            });
