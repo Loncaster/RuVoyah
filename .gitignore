@@ -13,6 +13,9 @@
 *.aab
 *.zip
 
+# IDE files
+**/.idea/
+
 # OS/editor noise
 .DS_Store
 Thumbs.db
