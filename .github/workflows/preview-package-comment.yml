@@ -77,20 +77,21 @@ jobs:
             core.setOutput('should_comment', shouldComment);
 
       - name: Comment preview result in PR
-        if: ${{ steps.payload.outputs.should_comment == 'true' && secrets.PREVIEW_COMMENT_TOKEN != '' }}
+        if: ${{ steps.payload.outputs.should_comment == 'true' }}
+        env:
+          PREVIEW_COMMENT_TOKEN: ${{ secrets.PREVIEW_COMMENT_TOKEN }}
         uses: actions/github-script@v8
         with:
-          github-token: ${{ secrets.PREVIEW_COMMENT_TOKEN }}
+          github-token: ${{ env.PREVIEW_COMMENT_TOKEN }}
           script: |
+            if (!process.env.PREVIEW_COMMENT_TOKEN) {
+              core.info('Repository secret PREVIEW_COMMENT_TOKEN is not configured.');
+              return;
+            }
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: Number('${{ steps.payload.outputs.pr_number }}'),
               body: ${{ toJSON(steps.payload.outputs.body) }}
             });
-
-      - name: Skip PR comment when token is missing
-        if: ${{ steps.payload.outputs.should_comment == 'true' && secrets.PREVIEW_COMMENT_TOKEN == '' }}
-        run: |
-          echo "Repository secret PREVIEW_COMMENT_TOKEN is not configured."
-          echo "Preview build succeeded, but no PR reply comment was posted."
