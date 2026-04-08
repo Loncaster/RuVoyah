@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.voyah.overlay.vehiclesetting">
+
+    <application android:hasCode="false" />
+
+    <overlay
+        android:targetPackage="com.qinggan.app.vehiclesetting"
+        android:isStatic="true"
+        android:priority="999" />
+</manifest>

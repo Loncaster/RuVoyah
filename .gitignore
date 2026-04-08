@@ -1,0 +1,18 @@
+# Android local configuration
+**/local.properties
+
+# Gradle caches
+**/.gradle/
+
+# Android build outputs
+**/build/
+
+# Generated APKs and archives
+*.apk
+*.ap_
+*.aab
+*.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

@@ -1,0 +1,44 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'ru.voyah.overlay.vehicle'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "ru.voyah.overlay.vehicle"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+    buildFeatures {
+        buildConfig = false
+        aidl = false
+        renderScript = false
+        shaders = false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "ru.voyah.overlay.vehicle.apk"
+        }
+    }
+}
+
+dependencies {
+}
