@@ -59,7 +59,7 @@
     <string name="disclaimer_agree_text">Принять и включить</string>
     <string name="disclaimer_content_text">　　При включении этой функции однократно активируется автоматический комфортный вход: после парковки при приближении с действующим Bluetooth-ключом подвеска автоматически опустится до приветственной высоты для удобства посадки.\n　　Однако это может создать риск повреждения днища о неровности покрытия из-за снижения клиренса.\n　　Пожалуйста, перед включением убедитесь в ровности покрытия на парковочном месте. Нажав «Принять», вы подтверждаете готовность к рискам, и функция включится однократно. Нажмите «Отмена» для выхода.</string>
     <string name="disclaimer_title">Отказ от ответств.</string>
-    <string name="drive_mode_outing_not_usable">Скорость более %d км/ч - режим Outing недоступен</string>
+    <string name="drive_mode_outing_not_usable">Скорость более %d км/ч - режим «Бездорожье» недоступен</string>
     <string name="driving_mode">Режим вождения</string>
     <string name="driving_mode_comfort">Комф.</string>
     <string name="driving_mode_comfort_mode">Комф.</string>
@@ -141,10 +141,10 @@
     <string name="open_tank_h56">Бензин</string>
     <string name="open_trunk">Откр. багажник</string>
     <string name="open_windows">Авт. откр.</string>
-    <string name="open_windows_new">Закр. окна</string>
+    <string name="open_windows_new">Открыть окна</string>
     <string name="opening_trunk">Открытие багажника</string>
     <string name="out_of_space">Нет места на главном экране.</string>
-    <string name="outing_mode_un_used">Недоступно в режиме Outing</string>
+    <string name="outing_mode_un_used">Недоступно в режиме «Бездорожье»</string>
     <string name="parking_open_charging">Переведите в P</string>
     <string name="parking_open_tank">Переведите в P</string>
     <string name="parking_open_tank_h56">Переведите в P</string>
