@@ -1,6 +1,3 @@
-$ErrorActionPreference = "Stop"
-Set-StrictMode -Version Latest
-
 param(
     [Parameter(Mandatory = $true)]
     [string]$OutputRoot,
@@ -12,6 +9,9 @@ param(
     [ValidateSet("stable", "preview")]
     [string]$Channel
 )
+
+$ErrorActionPreference = "Stop"
+Set-StrictMode -Version Latest
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $packageName = "RuVoyah_{0}_{1}" -f $Version, $Channel
