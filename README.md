@@ -27,8 +27,7 @@
 
 1. Скачайте стабильный релиз из GitHub Releases.
 2. Распакуйте архив.
-3. При необходимости выполните `disable-verity`.
-4. Запустите `install_win.bat` или `install_mac.sh`.
+3. Запустите `install_win.bat` или `install_mac.sh`.
 
 ## Как внести перевод
 

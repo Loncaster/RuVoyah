@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="Snow_model_text">Снег</string>
     <string name="abandoned_clean_this">Удалить</string>
@@ -45,7 +45,7 @@
     <string name="all_app_name_dvr">Видеорегистратор</string>
     <string name="all_app_name_free_baike">Инструкция FREE</string>
     <string name="all_app_name_gallery">Галерея</string>
-    <string name="all_app_name_hicar">HUAWEI HiCar</string>
+    <string name="all_app_name_hicar">Huawei HiCar</string>
     <string name="all_app_name_hotel">Отель</string>
     <string name="all_app_name_iot">IoT</string>
     <string name="all_app_name_karaoke">Караоке</string>
@@ -67,7 +67,7 @@
     <string name="all_app_name_setting">Настройки</string>
     <string name="all_app_name_takeaway">Доставка</string>
     <string name="all_app_name_train_ticket">Билеты на поезд</string>
-    <string name="all_app_name_user_center">Центр пользователя</string>
+    <string name="all_app_name_user_center">Пользователь</string>
     <string name="all_app_name_user_manual">Руководство</string>
     <string name="all_app_name_video">Видео</string>
     <string name="all_app_name_violations">Проверка штрафов</string>
@@ -109,13 +109,13 @@
     <string name="avm_state_inhibited">AVM временно недоступен</string>
     <string name="backrestmode">режим отдыха на заднем сиденье</string>
     <string name="battery_low_toast_15">Батарея разряжена. Пожалуйста, зарядите ее до 15% и повторите попытку.</string>
-    <string name="bdText">BD\n1080P</string>
-    <string name="blue_dismiss">Bluetooth телефона не подключен</string>
+    <string name="bdText">BD\n1080p</string>
+    <string name="blue_dismiss">BT не подключен</string>
     <string name="bluetooth_headset">Bluetooth-гарнитура</string>
     <string name="bluetooth_headset_hiboard">BT-гарнитура</string>
     <string name="brightness">Яркость</string>
     <string name="brightness_high_temp">Высокая температура экрана, регулировка подсветки не работает</string>
-    <string name="bt_music_no_connect">Bluetooth-музыка не подключена</string>
+    <string name="bt_music_no_connect">BT-музыка не подключена</string>
     <string name="bt_please_play_music">Включите музыку\nна телефоне</string>
     <string name="btn_cancel">Отмена</string>
     <string name="business_theme">Деловой</string>
@@ -169,10 +169,10 @@
     <string name="dialogCancel">Отмена</string>
     <string name="dialogEnsure">Подтвердить</string>
     <string name="disclaimer_agree_text">Согласен и вкл.</string>
-    <string name="disclaimer_content_text">　　При включении этой функции для вас единоразово будет включена функция "Легкий доступ": после парковки, если вы приблизитесь к автомобилю с действительным BT-ключом, подвеска автоматически опустится до приветственной высоты, чтобы облегчить вам и другим пассажирам посадку. \n　　Однако, пользуясь этим удобством, вы можете подвергнуть ваш автомобиль ненужным рискам из-за особенностей парковочного места, например, трение днища о неровности дороги из-за опускания подвески.\n　　Поэтому перед включением этой функции, пожалуйста, убедитесь в безопасности парковочного места, включая, но не ограничиваясь, наличием явных неровностей на дорожном покрытии. Если вы уверены, что хотите включить ее, нажмите "Согласен", чтобы подтвердить, что вы осведомлены и готовы принять на себя вышеуказанные риски, после чего функция будет включена для вас единоразово; вы также можете нажать "Отмена" для выхода.</string>
+    <string name="disclaimer_content_text">　При включении этой функции для вас единоразово будет включена функция "Легкий доступ": после парковки, если вы приблизитесь к автомобилю с действительным BT-ключом, подвеска автоматически опустится до приветственной высоты, чтобы облегчить вам и другим пассажирам посадку. \n　　Однако, пользуясь этим удобством, вы можете подвергнуть ваш автомобиль ненужным рискам из-за особенностей парковочного места, например, трение днища о неровности дороги из-за опускания подвески.\n　　Поэтому перед включением этой функции, пожалуйста, убедитесь в безопасности парковочного места, включая, но не ограничиваясь, наличием явных неровностей на дорожном покрытии. Если вы уверены, что хотите включить ее, нажмите "Согласен", чтобы подтвердить, что вы осведомлены и готовы принять на себя вышеуказанные риски, после чего функция будет включена для вас единоразово; вы также можете нажать "Отмена" для выхода.</string>
     <string name="disclaimer_title">Отказ от ответственности</string>
     <string name="dlna">DLNA</string>
-    <string name="drive_mode_outing_not_usable">Скорость > 40 км/ч, невозможно активировать режим "Бездорожье"</string>
+    <string name="drive_mode_outing_not_usable">Скорость более 40 км/ч - невозможно включить режим "Бездорожье"</string>
     <string name="driving_mode">Режим вождения</string>
     <string name="driving_mode_comfort">Комфорт</string>
     <string name="driving_mode_comfort_mode">Комфорт</string>
@@ -203,7 +203,7 @@
     <string name="eng_activity_save_log">Сохранить лог на USB-диск</string>
     <string name="engine_not_start">Нажмите педаль тормоза</string>
     <string name="eoc_model_text">Эко.</string>
-    <string name="fhdText">FHD\n720P</string>
+    <string name="fhdText">FHD\n720p</string>
     <string name="first_run_cling_title">Добро пожаловать</string>
     <string name="folder_closed">Папка закрыта</string>
     <string name="folder_created">Папка создана</string>
@@ -218,25 +218,25 @@
     <string name="gadget_error_text">Ошибка загрузки виджета</string>
     <string name="gadget_setup_text">Настройка</string>
     <string name="guest_user">Гость</string>
-    <string name="hdText">HD\n480P</string>
+    <string name="hdText">HD\n480p</string>
     <string name="heated_seat">Подогрев</string>
     <string name="help_text">Помощь</string>
     <string name="hiboard_widget_autolight">Авто</string>
     <string name="hiboard_widget_bt">Bluetooth</string>
     <string name="hiboard_widget_dlna">DLNA</string>
-    <string name="hiboard_widget_main_screen_off">Выкл.</string>
-    <string name="hiboard_widget_main_screen_off_small">Водит.</string>
+    <string name="hiboard_widget_main_screen_off">Выкл</string>
+    <string name="hiboard_widget_main_screen_off_small">Левый</string>
     <string name="hiboard_widget_mute">Без звука</string>
     <string name="hiboard_widget_privacy">Личное</string>
-    <string name="hiboard_widget_second_screen_off">Выкл.</string>
+    <string name="hiboard_widget_second_screen_off">Выкл</string>
     <string name="hiboard_widget_second_screen_off2">Выкл. экрана</string>
-    <string name="hiboard_widget_second_screen_off_small">Пас.</string>
+    <string name="hiboard_widget_second_screen_off_small">Правый</string>
     <string name="hiboard_widget_settings">Настройки</string>
     <string name="hiboard_widget_stand_by">Ожидание</string>
     <string name="hiboard_widget_switch_theme">Сменить тему</string>
     <string name="hiboard_widget_wifi">Wi-Fi</string>
     <string name="hiboard_widget_wireless_charge">Зарядка</string>
-    <string name="hicar_bt_power_first">Используется HUAWEI HiCar</string>
+    <string name="hicar_bt_power_first">Используется Huawei HiCar</string>
     <string name="hicar_bt_power_second">BT-звонок недоступен</string>
     <string name="high_text">Высокий</string>
     <string name="highest_text">Макс.</string>
@@ -288,7 +288,7 @@
     <string name="kw_collected_cancel">Удалено из избранного</string>
     <string name="kw_collected_success">Успешно добавлено в избранное</string>
     <string name="librarys_full">Оставьте хотя бы один</string>
-    <string name="link_blue">Подключить Bluetooth</string>
+    <string name="link_blue">Подключить</string>
     <string name="loading_text">Загрузка...</string>
     <string name="locating">Определение местоположения…</string>
     <string name="lock">Заблокировать</string>
@@ -311,7 +311,7 @@
     <string name="media">Медиа</string>
     <string name="medium_text">Сред.</string>
     <string name="message_center">Центр сообщений</string>
-    <string name="message_center_limited">Пожалуйста, просмотрите Центр пользователя в режиме поднятого экрана</string>
+    <string name="message_center_limited">Пожалуйста, просмотрите раздел Пользователь в режиме поднятого экрана</string>
     <string name="migration_cling_copy_apps">КОПИРОВАТЬ ЗНАЧКИ</string>
     <string name="migration_cling_description">Импортировать значки и папки со старых главных экранов?</string>
     <string name="migration_cling_title">Скопируйте значки приложений</string>
@@ -349,12 +349,12 @@
     <string name="nsdk_string_navi_no_name_road">Дорога без названия</string>
     <string name="off">ВЫКЛ</string>
     <string name="on">ВКЛ</string>
-    <string name="open_charge_port_title">Вы уверены, что хотите активировать открытие зарядного порта?</string>
+    <string name="open_charge_port_title">Вы уверены, что хотите открыть лючок зарядки?</string>
     <string name="open_charging">Зарядка</string>
-    <string name="open_fuel_flap_title">Вы уверены, что хотите активировать открытие бензобака?</string>
+    <string name="open_fuel_flap_title">Вы уверены, что хотите открыть лючок бензобака?</string>
     <string name="open_fuel_flap_title_h56">Разблокировать лючок топливного бака? Запрещено запускать двигатель во время заправки</string>
     <string name="open_hdc_title">При включении HDC существует риск отката при парковке на склоне. Требуются тормозные меры, такие как нажатие на тормоз, переключение на P и включение электронного стояночного тормоза.</string>
-    <string name="open_tank">Бензин</string>
+    <string name="open_tank">Откр. лючок</string>
     <string name="open_tank_h56">Разбл. лючок</string>
     <string name="open_trunk">Откр. багажник</string>
     <string name="open_windows">Откр. окна</string>
@@ -366,7 +366,7 @@
     <string name="parking_open_charging">Сначала переключитесь на P</string>
     <string name="parking_open_tank">Сначала переключитесь на P</string>
     <string name="parking_open_tank_h56">Сначала переключитесь на P</string>
-    <string name="pedestrian_alarm">AVAS</string>
+    <string name="pedestrian_alarm">Сигнал пешеходу</string>
     <string name="permdesc_install_shortcut">Разрешает приложению добавлять ярлыки без вмешательства пользователя.</string>
     <string name="permdesc_read_settings">Разрешает приложению читать настройки и ярлыки на главном экране.</string>
     <string name="permdesc_write_settings">Разрешает приложению изменять настройки и ярлыки на главном экране.</string>
@@ -443,7 +443,7 @@
     <string name="sdText">SD\n360P</string>
     <string name="search_hint">Введите название города</string>
     <string name="search_more">Показать еще</string>
-    <string name="seat_heat_name">Подогрев</string>
+    <string name="seat_heat_name">Обогрев</string>
     <string name="seat_massage_name">Массаж</string>
     <string name="seat_ventilate_name">Вентиляция</string>
     <string name="second_screen_app_disable_parking">Используется на экране водителя; невозможно открыть на экране пассажира</string>
@@ -470,7 +470,7 @@
     <string name="third_screen_lock">Задний экран</string>
     <string name="thursday">Четверг</string>
     <string name="time_formatter">EEEE, d MMMM</string>
-    <string name="toast_to_start_app">Не удалось запустить приложение, перейдите в Расширенные настройки > Конфигурация приложений > Переключатель запуска приложений, чтобы включить эту опцию</string>
+    <string name="toast_to_start_app">Не удалось запустить приложение, перейдите в Расширенные настройки &gt; Конфигурация приложений &gt; Переключатель запуска приложений, чтобы включить эту опцию</string>
     <string name="today">Сегодня</string>
     <string name="toggle_weight_watcher">Показать память</string>
     <string name="tomorrow">Завтра</string>
@@ -505,15 +505,15 @@
     <string name="vehicle_hi_board_new_charge_port">Порт зарядки</string>
     <string name="vehicle_hi_board_new_down_screen_prompt">Функция недоступна в режиме опущенного экрана</string>
     <string name="vehicle_hi_board_new_drive_mode">Режим вождения</string>
-    <string name="vehicle_hi_board_new_entry">Легк. выход</string>
+    <string name="vehicle_hi_board_new_entry">Легкий выход</string>
     <string name="vehicle_hi_board_new_force_ev">Принуд. EV</string>
     <string name="vehicle_hi_board_new_fragrance">Ароматизатор</string>
     <string name="vehicle_hi_board_new_fuel_port">Лючок бака</string>
     <string name="vehicle_hi_board_new_hdc">HDC</string>
     <string name="vehicle_hi_board_new_moon_roof">Панорама</string>
     <string name="vehicle_hi_board_new_more">Еще</string>
-    <string name="vehicle_hi_board_new_off">ВЫКЛ</string>
-    <string name="vehicle_hi_board_new_on">ВКЛ</string>
+    <string name="vehicle_hi_board_new_off">Выкл</string>
+    <string name="vehicle_hi_board_new_on">Вкл</string>
     <string name="vehicle_hi_board_new_parking">Парковка</string>
     <string name="vehicle_hi_board_new_parking_speed_prompt">Автомобиль в движении, EPB недоступен</string>
     <string name="vehicle_hi_board_new_power_hold">Удерж. заряда</string>
@@ -544,8 +544,8 @@
     <string name="vehicle_hiboard_h97_fuel_port">Лючок бака</string>
     <string name="vehicle_hiboard_h97_hdc">HDC</string>
     <string name="vehicle_hiboard_h97_more">Еще</string>
-    <string name="vehicle_hiboard_h97_off">ВЫКЛ</string>
-    <string name="vehicle_hiboard_h97_on">ВКЛ</string>
+    <string name="vehicle_hiboard_h97_off">Выкл</string>
+    <string name="vehicle_hiboard_h97_on">Вкл</string>
     <string name="vehicle_hiboard_h97_sc">Панорама</string>
     <string name="vehicle_hiboard_h97_seat_memory">Сиденье</string>
     <string name="vehicle_hiboard_h97_sunroof">Люк</string>
@@ -562,7 +562,7 @@
     <string name="vehicle_second_hiboard_h97_wind">Обдув</string>
     <string name="ventilated_seat">Вентиляция</string>
     <string name="ventilation">Вентиляция</string>
-    <string name="ventilation_new">Вентиляция</string>
+    <string name="ventilation_new">Проветривание</string>
     <string name="video_recommend">Видео реком.</string>
     <string name="volume_high_temp">Высокая температура платы, регулировка громкости не работает</string>
     <string name="voyah_home_card_fragrance">Ароматизатор</string>

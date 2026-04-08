@@ -72,8 +72,8 @@ RuVoyah package: $Channel
 Version: $Version
 
 1. Connect the vehicle over adb.
-2. Run disable-verity if required by your firmware.
-3. Run install_win.bat on Windows or install_mac.sh on macOS.
+2. Run install_win.bat on Windows or install_mac.sh on macOS.
+3. The install script performs verity preparation automatically when needed.
 4. To remove overlays, run uninstall_win.bat or uninstall_mac.sh.
 "@
 

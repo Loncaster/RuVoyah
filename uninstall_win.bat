@@ -1,52 +1,66 @@
 @echo off
-setlocal EnableExtensions
-chcp 65001 > nul
+chcp 1251 > nul
 pushd "%~dp0" > nul
 
-set "PACKAGES=ru.voyah.overlay.vehiclesetting ru.voyah.overlay.vehicle ru.voyah.overlay.setting ru.voyah.overlay.launcher ru.voyah.overlay.dvr ru.voyah.overlay.bluetoothphone ru.voyah.overlay.hiboard"
-
 echo ====================================================
-echo   РЈРґР°Р»РµРЅРёРµ СЂСѓСЃРёС„РёРєР°С†РёРё VOYAH FREE
+echo   УДАЛЕНИЕ РУСИФИКАЦИИ VOYAH
 echo ====================================================
 echo.
 
 if not exist "adb.exe" (
-    echo РќРµ РЅР°Р№РґРµРЅ adb.exe. РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ СЃРєСЂРёРїС‚ Р»РµР¶РёС‚ РІ РѕРґРЅРѕР№ РїР°РїРєРµ СЃ adb.
+    echo Не найден adb.exe. Поместите скрипт в папку с adb!
     pause
-    exit /b 1
+    exit /b
 )
 
-echo РћР¶РёРґР°РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР°...
+echo Ожидание устройства...
 adb wait-for-device
 
-echo РџРµСЂРµР·Р°РїСѓСЃРєР°РµРј adb РІ СЂРµР¶РёРј root...
+echo Переключение adb в режим root...
 adb root
-timeout /t 3 > nul
+timeout 3 > nul
 
-echo РњРѕРЅС‚РёСЂСѓРµРј СЃРёСЃС‚РµРјРЅС‹Р№ СЂР°Р·РґРµР»...
+echo Разрешение записи в system...
 adb remount
-timeout /t 3 > nul
+timeout 3 > nul
+
 adb wait-for-device
 
-echo Р”РµР°РєС‚РёРІР°С†РёСЏ overlays...
-for %%P in (%PACKAGES%) do (
-    adb shell cmd overlay disable --user 0 %%P
-)
-timeout /t 2 > nul
+echo Отключение overlays...
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.vehiclesetting
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.vehicle
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.setting
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.launcher
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.dvr
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.bluetoothphone
+adb shell cmd overlay disable --user 0 ru.voyah.overlay.hiboard
+timeout 2 > nul
 
-echo РЈРґР°Р»РµРЅРёРµ overlays...
-for %%P in (%PACKAGES%) do (
-    adb shell rm -f /vendor/overlay/%%P.apk
-    adb shell rm -f /system/product/overlay/%%P.apk
-)
-timeout /t 2 > nul
+echo Удаление overlays из системного раздела...
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.vehiclesetting.apk
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.vehicle.apk
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.setting.apk
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.launcher.apk
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.dvr.apk
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.bluetoothphone.apk
+adb shell rm -f /vendor/overlay/ru.voyah.overlay.hiboard.apk
 
-echo РџРµСЂРµР·Р°РіСЂСѓР·РєР° РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°...
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.vehiclesetting.apk
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.vehicle.apk
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.setting.apk
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.launcher.apk
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.dvr.apk
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.bluetoothphone.apk
+adb shell rm -f /system/product/overlay/ru.voyah.overlay.hiboard.apk
+timeout 2 > nul
+
+echo Перезагрузка для окончательного применения изменений...
 adb reboot
 
+
 echo ==============================================
-echo Р СѓСЃРёС„РёРєР°С†РёСЏ СѓРґР°Р»РµРЅР°!
+echo Русификация удалена!
 echo ==============================================
 echo.
 pause
-exit /b 0
+exit /b
