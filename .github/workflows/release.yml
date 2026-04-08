@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -25,17 +27,18 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Read version
+      - name: Fetch tags
+        shell: pwsh
+        run: git fetch --tags --force
+
+      - name: Resolve release version
         id: version
         shell: pwsh
         run: |
-          $version = (Get-Content version.txt -Raw).Trim()
-          if ([string]::IsNullOrWhiteSpace($version)) {
-            throw "version.txt is empty"
-          }
-          "value=$version" >> $env:GITHUB_OUTPUT
-          "tag=v$version-build.${{ github.run_number }}" >> $env:GITHUB_OUTPUT
-          "release_name=RuVoyah $version build ${{ github.run_number }}" >> $env:GITHUB_OUTPUT
+          $releaseInfo = ./scripts/get-release-version.ps1 | ConvertFrom-Json
+          "value=$($releaseInfo.version)" >> $env:GITHUB_OUTPUT
+          "tag=$($releaseInfo.release_tag)" >> $env:GITHUB_OUTPUT
+          "release_name=$($releaseInfo.release_name)" >> $env:GITHUB_OUTPUT
 
       - name: Build overlays
         shell: pwsh

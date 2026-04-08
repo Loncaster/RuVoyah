@@ -40,8 +40,7 @@ $rootFiles = @(
     "uninstall_mac.sh",
     "disable-verity_win.bat",
     "disable-verity_mac.sh",
-    "license.txt",
-    "version.txt"
+    "license.txt"
 )
 
 if (Test-Path $packageRoot) {
@@ -79,6 +78,7 @@ Version: $Version
 "@
 
 Set-Content -LiteralPath (Join-Path $packageRoot "README.txt") -Value $readmeText -Encoding UTF8
+Set-Content -LiteralPath (Join-Path $packageRoot "version.txt") -Value $Version -Encoding UTF8
 
 Compress-Archive -Path (Join-Path $packageRoot "*") -DestinationPath $archivePath -Force
 
