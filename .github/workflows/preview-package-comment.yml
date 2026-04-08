@@ -9,7 +9,6 @@ on:
 
 permissions:
   actions: read
-  issues: write
 
 jobs:
   comment:
