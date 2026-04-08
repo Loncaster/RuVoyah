@@ -4,6 +4,21 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "source code/**"
+      - "scripts/build-all-overlays.ps1"
+      - "scripts/get-release-version.ps1"
+      - "scripts/package-release.ps1"
+      - "install_win.bat"
+      - "install_mac.sh"
+      - "uninstall_win.bat"
+      - "uninstall_mac.sh"
+      - "disable-verity_win.bat"
+      - "disable-verity_mac.sh"
+      - "adb"
+      - "adb.exe"
+      - "AdbWinApi.dll"
+      - "AdbWinUsbApi.dll"
 
 permissions:
   contents: write

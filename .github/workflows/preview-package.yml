@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Read PR metadata
         id: pr
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const commentBody = (context.payload.comment.body || '').trim();
@@ -55,6 +55,21 @@ jobs:
             core.setOutput('pr_number', String(pr.number));
             core.setOutput('head_repo', pr.head.repo.full_name);
             core.setOutput('head_ref', pr.head.ref);
+
+      - name: Write preview metadata
+        if: ${{ steps.pr.outputs.command_matched == 'true' && steps.pr.outputs.allowed == 'true' }}
+        shell: bash
+        run: |
+          mkdir -p preview-metadata
+          printf '%s' "${{ steps.pr.outputs.pr_number }}" > preview-metadata/pr_number.txt
+
+      - name: Upload preview metadata
+        if: ${{ steps.pr.outputs.command_matched == 'true' && steps.pr.outputs.allowed == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-metadata-pr${{ steps.pr.outputs.pr_number }}
+          path: preview-metadata/pr_number.txt
+          retention-days: 14
 
   build:
     needs: prepare
