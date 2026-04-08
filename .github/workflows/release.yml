@@ -1,0 +1,54 @@
+name: Stable Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Read version
+        id: version
+        shell: pwsh
+        run: |
+          $version = (Get-Content version.txt -Raw).Trim()
+          if ([string]::IsNullOrWhiteSpace($version)) {
+            throw "version.txt is empty"
+          }
+          "value=$version" >> $env:GITHUB_OUTPUT
+          "tag=v$version-build.${{ github.run_number }}" >> $env:GITHUB_OUTPUT
+          "release_name=RuVoyah $version build ${{ github.run_number }}" >> $env:GITHUB_OUTPUT
+
+      - name: Build overlays
+        shell: pwsh
+        run: ./scripts/build-all-overlays.ps1
+
+      - name: Package stable archive
+        shell: pwsh
+        run: ./scripts/package-release.ps1 -OutputRoot "$env:RUNNER_TEMP\out" -Version "${{ steps.version.outputs.value }}" -Channel stable
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: ${{ steps.version.outputs.release_name }}
+          generate_release_notes: true
+          files: ${{ runner.temp }}/out/*.zip
