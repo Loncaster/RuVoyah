@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Comment preview result in PR
+      - name: Prepare PR comment payload
+        id: payload
         uses: actions/github-script@v8
         with:
           script: |
@@ -47,6 +48,7 @@ jobs:
             const runUrl = run.html_url;
 
             let body = '';
+            let shouldComment = 'false';
 
             if (run.conclusion === 'success' && previewArtifact) {
               const artifactUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${run.id}/artifacts/${previewArtifact.id}`;
@@ -58,20 +60,38 @@ jobs:
                 '',
                 'This preview package is built from the current PR branch and is not published to GitHub Releases.'
               ].join('\n');
+              shouldComment = 'true';
             } else if (run.conclusion === 'failure') {
               body = [
                 `Preview package build failed for PR #${prNumber}.`,
                 '',
                 `Workflow run: ${runUrl}`
               ].join('\n');
+              shouldComment = 'true';
             } else {
               core.info(`Skipping comment for workflow conclusion: ${run.conclusion}`);
               return;
             }
 
+            core.setOutput('pr_number', String(prNumber));
+            core.setOutput('body', body);
+            core.setOutput('should_comment', shouldComment);
+
+      - name: Comment preview result in PR
+        if: ${{ steps.payload.outputs.should_comment == 'true' && secrets.PREVIEW_COMMENT_TOKEN != '' }}
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.PREVIEW_COMMENT_TOKEN }}
+          script: |
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: prNumber,
-              body
+              issue_number: Number('${{ steps.payload.outputs.pr_number }}'),
+              body: ${{ toJSON(steps.payload.outputs.body) }}
             });
+
+      - name: Skip PR comment when token is missing
+        if: ${{ steps.payload.outputs.should_comment == 'true' && secrets.PREVIEW_COMMENT_TOKEN == '' }}
+        run: |
+          echo "Repository secret PREVIEW_COMMENT_TOKEN is not configured."
+          echo "Preview build succeeded, but no PR reply comment was posted."
