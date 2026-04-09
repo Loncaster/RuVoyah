@@ -6,59 +6,68 @@ export LANG=ru_RU.UTF-8
 cd "$(dirname "$0")"
 
 packages=(
-  "ru.voyah.overlay.vehiclesetting"
-  "ru.voyah.overlay.vehicle"
-  "ru.voyah.overlay.setting"
-  "ru.voyah.overlay.launcher"
-  "ru.voyah.overlay.dvr"
-  "ru.voyah.overlay.bluetoothphone"
-  "ru.voyah.overlay.hiboard"
+    "ru.voyah.overlay.vehiclesetting"
+    "ru.voyah.overlay.vehicle"
+    "ru.voyah.overlay.setting"
+    "ru.voyah.overlay.launcher"
+    "ru.voyah.overlay.dvr"
+    "ru.voyah.overlay.bluetoothphone"
+    "ru.voyah.overlay.hiboard"
+)
+target_dirs=(
+    "/vendor/overlay"
+    "/system/product/overlay"
 )
 
+pause_for_exit() {
+    read -r -p "Нажмите Enter для выхода..."
+}
+
 echo "===================================================="
-echo "  Удаление русификации VOYAH FREE"
+echo "  Удаление русификации VOYAH"
 echo "===================================================="
 echo ""
 
 if [ ! -f "adb" ]; then
-    echo "Не найден adb. Убедитесь, что скрипт лежит в одной папке с adb."
-    read -r -p "Нажмите Enter для выхода..."
+    echo "Не найден adb. Поместите скрипт в папку с adb!"
+    pause_for_exit
     exit 1
 fi
 
 chmod +x adb
 
 echo "Ожидание устройства..."
-./adb wait-for-device
+./adb -d wait-for-device
 
-echo "Перезапускаем adb в режим root..."
-./adb root
+echo "Переключение adb в режим root..."
+./adb -d root
 sleep 3
 
-echo "Монтируем системный раздел..."
-./adb remount
+echo "Разрешение записи в system..."
+./adb -d remount
 sleep 3
-./adb wait-for-device
+./adb -d wait-for-device
 
 echo "Деактивация overlays..."
 for package in "${packages[@]}"; do
-    ./adb shell cmd overlay disable --user 0 "$package"
+    ./adb -d shell cmd overlay disable --user 0 "$package"
 done
 sleep 2
 
-echo "Удаление overlays..."
-for package in "${packages[@]}"; do
-    ./adb shell rm -f "/vendor/overlay/$package.apk"
-    ./adb shell rm -f "/system/product/overlay/$package.apk"
+echo "Удаление overlays из системных разделов..."
+for target_dir in "${target_dirs[@]}"; do
+    for package in "${packages[@]}"; do
+        ./adb -d shell rm -f "$target_dir/$package.apk"
+    done
 done
 sleep 2
 
-echo "Перезагрузка для восстановления оригинального интерфейса..."
-./adb reboot
+echo "Перезагрузка для восстановления оригинальной прошивки..."
+./adb -d reboot
 
 echo "=============================================="
 echo "Русификация удалена!"
 echo "=============================================="
 echo ""
-read -r -p "Нажмите Enter для выхода..."
+pause_for_exit
 exit 0

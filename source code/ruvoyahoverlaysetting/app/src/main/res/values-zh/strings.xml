@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">О приложении</string>
     <string name="ai_driver_package_version">Версия пакета Smart Drive</string>
@@ -35,7 +35,7 @@
     <string name="air_condition_set_airstatusopen">A/C вкл.</string>
     <string name="air_condition_set_auto">Авто вкл.</string>
     <string name="air_condition_set_neixunhuan">Рециркуляция вкл.</string>
-    <string name="air_condition_set_open">Вкл.</string>
+    <string name="air_condition_set_open">Вкл</string>
     <string name="air_condition_set_qianchuangchuwu">Обдув лоб. стекла вкл.</string>
     <string name="air_condition_set_sync">Синхр. лев./прав. вкл.</string>
     <string name="air_condition_set_waixunhuan">Рециркуляция выкл.</string>
@@ -78,7 +78,7 @@
     <string name="application_remind">Уведомления</string>
     <string name="application_schedule_remind">Напоминание о расписании</string>
     <string name="appointment_upgrade">Запланировать обновление</string>
-    <string name="arkarmys_mode_close_x37">Выкл.</string>
+    <string name="arkarmys_mode_close_x37">Выкл</string>
     <string name="arkarmys_mode_driver_x37">Режим водителя</string>
     <string name="arkarmys_mode_passengers_x37">Все пассажиры</string>
     <string name="arkarmys_mode_x37">ARKAMYS 3D</string>
@@ -107,8 +107,8 @@
     <string name="baitian3">День 3</string>
     <string name="baitian4">День 4</string>
     <string name="banbenxinxi">Информация о версии</string>
-    <string name="baritone">Сред.</string>
-    <string name="bass">Низ.</string>
+    <string name="baritone">СЧ</string>
+    <string name="bass">НЧ</string>
     <string name="biandaozhuanxiangdeng">Сигнал поворота</string>
     <string name="bikaidukou">Избегать паромов</string>
     <string name="bikaigaojia">Избегать эстакад</string>
@@ -201,8 +201,8 @@
     <string name="clock_sleep">Часы</string>
     <string name="close_door_auto_close_window">Автозакрытие окон при блокировке</string>
     <string name="closing_bt">Отключение функции Bluetooth-гарнитуры</string>
-    <string name="cluster_card_desc">(Не отображается в режимах Навигация / Полноэкранная навигация / Скрытый дисплей)</string>
-    <string name="cluster_card_desc_oversea">(Не отображается в режиме Скрытый мультимедийный дисплей)</string>
+    <string name="cluster_card_desc"> (Не отображается в режимах Навигация / Полноэкранная навигация / Скрытый дисплей)</string>
+    <string name="cluster_card_desc_oversea"> (Не отображается в режиме Скрытый дисплей)</string>
     <string name="cluster_card_energy_consumption_stat">Расх. эн.</string>
     <string name="cluster_card_energy_flow">Поток эн.</string>
     <string name="cluster_card_full_navi">Навиг.</string>
@@ -249,7 +249,7 @@
     <string name="continuous_dialogue">Непрерывный диалог</string>
     <string name="continuous_dialogue_hints_off">При выключении поддерживается только одна команда на каждое пробуждение.</string>
     <string name="continuous_dialogue_hints_on">При включении вы можете вести естественный непрерывный диалог\nв течение 20 секунд, не повторяя кодовое слово. Разговор можно прервать\nв любой момент.</string>
-    <string name="copilot_brightness">Пас.</string>
+    <string name="copilot_brightness">Прав. экран</string>
     <string name="cq_left_mid_rada_label">Передний левый средний радар:</string>
     <string name="cq_left_rada_label">Передний левый радар:</string>
     <string name="cq_right_mid_rada_label">Передний правый средний радар:</string>
@@ -283,8 +283,8 @@
     <string name="device_name_setting">Настройка имени устройства</string>
     <string name="device_name_setting_hint">Введите имя устройства</string>
     <string name="device_name_setting_title">Имя</string>
-    <string name="device_status_close">Выкл.</string>
-    <string name="device_status_open">Вкл.</string>
+    <string name="device_status_close">Выкл</string>
+    <string name="device_status_open">Вкл</string>
     <string name="dial_key_tone">Звук набора</string>
     <string name="dialogCancel">Отмена</string>
     <string name="dialogEnsure">Подтвердить</string>
@@ -322,8 +322,8 @@
     <string name="display_text_tire_unit_bar">бар</string>
     <string name="display_text_tire_unit_psi">psi</string>
     <string name="distortion">Коррекция искажений</string>
-    <string name="distortion_close">Выкл.</string>
-    <string name="distortion_open">Вкл.</string>
+    <string name="distortion_close">Выкл</string>
+    <string name="distortion_open">Вкл</string>
     <string name="ditubanben">Версия карты:</string>
     <string name="dituxianshi">Отображение карты</string>
     <string name="dlna_switcher">Переключатель DLNA</string>
@@ -348,7 +348,7 @@
     <string name="drive_sport">Спорт</string>
     <string name="drive_standard">Стандарт</string>
     <string name="drive_twist_curve">Кривая крутящего момента</string>
-    <string name="driver_brightness">Водит.</string>
+    <string name="driver_brightness">Центр. экран</string>
     <string name="driver_safe">Ограничения в движении</string>
     <string name="driver_safe_tip">При включении, если скорость превышает 5 км/ч, будет отображаться только количество новых сообщений, а не их содержание.</string>
     <string name="driving_auto_locked">Автоблокировка при движении</string>
@@ -389,7 +389,7 @@
     <string name="eng_activity_vehicle_configurations">Конфигурации авто</string>
     <string name="eng_activity_voice_licence">Разрешение USB для голоса</string>
     <string name="eng_anti_theft_alarm_light">Свет</string>
-    <string name="eng_anti_theft_alarm_light_horn">Свет+сигнал</string>
+    <string name="eng_anti_theft_alarm_light_horn">Свет+гудок</string>
     <string name="eng_anti_theft_alarm_title">Противоугонная сигнализация</string>
     <string name="eng_camera_none">Нет</string>
     <string name="eng_camera_original">Оригинал</string>
@@ -622,7 +622,7 @@
     <string name="input_pwd_ap_hint">Минимум 8 символов</string>
     <string name="input_pwd_hint">Введите пароль</string>
     <string name="instrument_update">Обновление приб. панели</string>
-    <string name="instrument_version">Версия ПО приб. панели</string>
+    <string name="instrument_version">Версия ПО приборной панели</string>
     <string name="intelligent_recommend">Умные рекомендации</string>
     <string name="intelligent_recommend_97">Умные рекомендации</string>
     <string name="intelligent_recommend_camera">Сервисы камеры</string>
@@ -657,7 +657,7 @@
     <string name="ivoka_wake_default">По умолч.</string>
     <string name="ivoka_wake_default_note_title_x37">Вы можете активировать голосового ассистента следующими словами:</string>
     <string name="ivoka_wake_default_string_x37">Привет, Воя / Эй, Воя</string>
-    <string name="ivoka_wake_no">Выкл.</string>
+    <string name="ivoka_wake_no">Выкл</string>
     <string name="ivoka_wake_no_string_x37">После отключения слова для пробуждения, голосового ассистента нельзя будет активировать голосом.</string>
     <string name="ivoke_beginner_mode">Стандарт</string>
     <string name="ivoke_beginner_mode_desc">Более подробное озвучивание</string>
@@ -724,11 +724,11 @@
     <string name="mcu_version">Версия MCU</string>
     <string name="media_volume">Громкость медиа</string>
     <string name="media_volume_x37">Медиа</string>
-    <string name="menu_privacy_navi">Конфиденциальность навигации</string>
-    <string name="menu_privacy_text">Конфиденциальность</string>
+    <string name="menu_privacy_navi">Приватность навигации</string>
+    <string name="menu_privacy_text">Приватность</string>
     <string name="metal">Металл</string>
-    <string name="meter">Приб.</string>
-    <string name="meter_title">Приб.</string>
+    <string name="meter">Лев. экран</string>
+    <string name="meter_title">Приборная панель</string>
     <string name="misc">Разное</string>
     <string name="misfire_auto_unlock">"Авторазблокировка при выкл. двигателя"</string>
     <string name="misfire_auto_unlock_four_doors">Четыре двери</string>
@@ -894,7 +894,7 @@
     <string name="privacy_text_mic_desc_56b_g1">Интеллектуальный голосовой ассистент и голосовой ввод отключены.</string>
     <string name="privacy_text_mic_desc_97c">Интеллектуальный голосовой ассистент и голосовой ввод отключены, видеорегистратор не может принимать звук.</string>
     <string name="privacy_text_mic_desc_oversea">Видеорегистратор не может записывать звук во время циклической записи.</string>
-    <string name="privacy_text_nav">Откл. навигацию и геолокацию</string>
+    <string name="privacy_text_nav">Отключить навигацию и геолокацию</string>
     <string name="privacy_text_nav_desc">Сервисы навигации, информация о близлежащих объектах и геолокация отключены.</string>
     <string name="privacy_text_remind">Всегда напоминать при запуске</string>
     <string name="privacy_text_schedule">Приватность расписания</string>
@@ -962,11 +962,11 @@
     <string name="res_version">Версия пакета ресурсов</string>
     <string name="rescan">Обновить</string>
     <string name="resource_update">Обновление пакета</string>
-    <string name="response_after_wakeup_mode_custom"></string>
-    <string name="response_after_wakeup_mode_custom_desc"></string>
-    <string name="response_after_wakeup_mode_default"></string>
-    <string name="response_after_wakeup_mode_default_desc"></string>
-    <string name="response_after_wakeup_title"></string>
+    <string name="response_after_wakeup_mode_custom" />
+    <string name="response_after_wakeup_mode_custom_desc" />
+    <string name="response_after_wakeup_mode_default" />
+    <string name="response_after_wakeup_mode_default_desc" />
+    <string name="response_after_wakeup_title" />
     <string name="rest_in_using">Невозможно редактировать в режиме отдыха, выйдите и повторите попытку</string>
     <string name="retry">Повторить</string>
     <string name="reverse_calibration">Калибровка заднего хода</string>
@@ -1086,21 +1086,21 @@
     <string name="speaker_danna">Dynaudio DSP без CAN</string>
     <string name="speaker_danna_can">Dynaudio DSP с CAN</string>
     <string name="speed_volume">Громкость от скорости</string>
-    <string name="speed_volume_group_high_tv_close">Выкл.</string>
+    <string name="speed_volume_group_high_tv_close">Выкл</string>
     <string name="speed_volume_group_high_tv_high">Высокая</string>
     <string name="speed_volume_group_high_tv_low">Низкая</string>
     <string name="speed_volume_group_high_tv_middle">Средняя</string>
     <string name="speed_volume_x37">Громкость от скорости</string>
     <string name="standardclear">SD</string>
     <string name="state_display">Описание состояния:</string>
-    <string name="steering_wheel_custom_key">Польз. кнопки руля</string>
+    <string name="steering_wheel_custom_key">Назначение кнопки</string>
     <string name="string_default">По умолч.</string>
-    <string name="sub">Бас</string>
+    <string name="sub">САБ</string>
     <string name="superclear">UHD</string>
     <string name="swc_angle_center">По центру</string>
     <string name="swc_angle_turn_left">Поворот влево</string>
     <string name="swc_angle_turn_right">Поворот вправо</string>
-    <string name="switch_open">Вкл.</string>
+    <string name="switch_open">Вкл</string>
     <string name="synchronous_adjustment">Синхронная регулировка</string>
     <string name="synchronous_adjustment_bright_close">Синхронизация яркости выключена</string>
     <string name="system">Система</string>
@@ -1154,7 +1154,7 @@
     <string name="tbox_iccid">T-Box ICCID</string>
     <string name="tbox_imei">T-Box IMEI</string>
     <string name="tbox_mcu_res_version">Версия ПО T-Box</string>
-    <string name="tbox_mpu_res_version">Версия обор. T-Box</string>
+    <string name="tbox_mpu_res_version">Версия T-Box</string>
     <string name="tbox_pdsn">T-Box PDSN</string>
     <string name="tbox_update">Обновление T-Box</string>
     <string name="tbox_update_complete">Обновление завершено</string>
@@ -1231,7 +1231,7 @@
     <string name="touch_tone">Звук касания</string>
     <string name="traffic_jam_remind_desc">Напоминание об объяснении опоздания в случае пробки.</string>
     <string name="travel_remind_desc">Рекомендации плейлистов, достопримечательностей, ресторанов и страхования для дальних поездок.</string>
-    <string name="treble">Выс.</string>
+    <string name="treble">ВЧ</string>
     <string name="trip_remind_desc">Напоминание об отправлении рейса и поезда.</string>
     <string name="tucengshezhi">Настройки слоя</string>
     <string name="tuoche_auto_mode">Авто</string>
@@ -1332,17 +1332,17 @@
     <string name="vehicle_dscu_easy_enter">Функция приветствия сиденья</string>
     <string name="vehicle_energy_feedback_hint_content">Чем сильнее рекуперация, тем быстрее автомобиль замедляется при движении накатом.</string>
     <string name="vehicle_energy_recovery">Рекуперация</string>
-    <string name="vehicle_energy_recovery_close">Выкл.</string>
+    <string name="vehicle_energy_recovery_close">Выкл</string>
     <string name="vehicle_energy_recovery_standard">Стандарт</string>
     <string name="vehicle_energy_recovery_strong">Сильная</string>
     <string name="vehicle_eps_mode_set">EPS</string>
     <string name="vehicle_eps_mode_set_comfortable">Комфорт</string>
     <string name="vehicle_eps_mode_set_sport">Спорт</string>
     <string name="vehicle_eps_mode_set_standard">Стандарт</string>
-    <string name="vehicle_follow_me_15">15с</string>
-    <string name="vehicle_follow_me_30">30с</string>
-    <string name="vehicle_follow_me_60">60с</string>
-    <string name="vehicle_follow_me_close">Выкл.</string>
+    <string name="vehicle_follow_me_15">15 сек</string>
+    <string name="vehicle_follow_me_30">30 сек</string>
+    <string name="vehicle_follow_me_60">60 сек</string>
+    <string name="vehicle_follow_me_close">Выкл</string>
     <string name="vehicle_foundation_control">Основное управление авто</string>
     <string name="vehicle_fragrance_1">Аромат 1</string>
     <string name="vehicle_fragrance_2">Аромат 2</string>
@@ -1501,8 +1501,8 @@
     <string name="vehicle_radio_button_power_charging_5a">5А</string>
     <string name="vehicle_radio_button_power_charging_8a">8А</string>
     <string name="vehicle_radio_button_power_charging_max">Макс.</string>
-    <string name="vehicle_radio_close">Выкл.</string>
-    <string name="vehicle_radio_open">Вкл.</string>
+    <string name="vehicle_radio_close">Выкл</string>
+    <string name="vehicle_radio_open">Вкл</string>
     <string name="vehicle_rcta">Оповещение о перекрестном движении сзади</string>
     <string name="vehicle_rcw">Предупреждение о столкновении сзади</string>
     <string name="vehicle_refr_mirror_auto">Автоскладывание</string>

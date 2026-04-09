@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="above_lc">Для использования ассистента LC, наберите скорость 20 км/ч или выше</string>
     <string name="acMax_closed">МАКС. A/C выкл.</string>
@@ -45,7 +45,7 @@
     <string name="control_seat_1">L1</string>
     <string name="control_seat_2">L2</string>
     <string name="control_seat_3">L3</string>
-    <string name="control_seat_close">Выкл.</string>
+    <string name="control_seat_close">Выкл</string>
     <string name="dialogCancel">Отмена</string>
     <string name="dialogEnsure">Подтвердить</string>
     <string name="do_not_switch">Не сейчас (%d)</string>
@@ -73,7 +73,7 @@
     <string name="frag_tips2">Пожалуйста, введите символы на кириллице/латинице</string>
     <string name="frag_tips3">Не более 6 символов</string>
     <string name="fragrance_channel_text">Тип</string>
-    <string name="fragrance_closed">Выкл.</string>
+    <string name="fragrance_closed">Выкл</string>
     <string name="fragrance_concentration_high">Выс.</string>
     <string name="fragrance_concentration_high_2">Интенс.</string>
     <string name="fragrance_concentration_low">Низ.</string>
@@ -86,7 +86,7 @@
     <string name="fragrance_desc_3">Освежающее ощущение водянистости успокаивает людей и их разум</string>
     <string name="fragrance_minute">мин</string>
     <string name="fragrance_name_can_not_be_same">Название аромата не может повторяться</string>
-    <string name="fragrance_opened">Вкл.</string>
+    <string name="fragrance_opened">Вкл</string>
     <string name="fragrance_title_1">Свежий бамбук</string>
     <string name="fragrance_title_2">Алый пион</string>
     <string name="fragrance_title_3">Водяная дымка</string>
@@ -123,7 +123,7 @@
     <string name="left_turn_obstacle">Поворот налево для объезда препятствия</string>
     <string name="left_turn_oversize">Поворот налево для объезда крупногабаритного ТС</string>
     <string name="main_driver">Водитель</string>
-    <string name="main_vice_same">Синхр. перед.</string>
+    <string name="main_vice_same">Синхронно</string>
     <string name="massage_bl">Волны</string>
     <string name="massage_dx">Перекаты</string>
     <string name="memory">Память</string>
@@ -149,10 +149,10 @@
     <string name="noa_on">NOA вкл.</string>
     <string name="not_selected">Не выбрано</string>
     <string name="not_supported_temporarily">Функция временно недоступна</string>
-    <string name="off">Выкл.</string>
+    <string name="off">Выкл</string>
     <string name="oil_quantity">Уровень топлива</string>
     <string name="ok">ОК</string>
-    <string name="on">Вкл.</string>
+    <string name="on">Вкл</string>
     <string name="out_car_circle_open">Рециркуляция выкл.</string>
     <string name="overtaking_left">Обгон слева</string>
     <string name="overtaking_right">Обгон справа</string>
@@ -188,15 +188,15 @@
     <string name="save_location_2">Отдых</string>
     <string name="save_location_3">Другое</string>
     <string name="save_location_4">Обычное</string>
-    <string name="save_passenger_seat_desc0">"Сначала отрегулируйте сиденье, затем нажмите &quot;Память&quot;, чтобы запомнить текущее положение"</string>
+    <string name="save_passenger_seat_desc0">"Сначала отрегулируйте сиденье, затем нажмите "Память", чтобы запомнить текущее положение"</string>
     <string name="save_passenger_seat_title">Память и восст. пас. сиденья</string>
     <string name="save_seat">Сохранить %s</string>
     <string name="save_seat_title">Память и восст. водит. сиденья</string>
-    <string name="save_seat_title0">"Сначала отрегулируйте сиденье и зеркало в желаемое положение, затем нажмите &quot;Память&quot;, чтобы сохранить текущее положение"</string>
-    <string name="save_seat_title1">"Нажмите &quot;Восстановить&quot;, чтобы вернуться к запомненному положению"</string>
+    <string name="save_seat_title0">"Сначала отрегулируйте сиденье и зеркало в желаемое положение, затем нажмите "Память", чтобы сохранить текущее положение"</string>
+    <string name="save_seat_title1">"Нажмите "Восстановить", чтобы вернуться к запомненному положению"</string>
     <string name="save_seat_title_s">Память и восст. сиденья водителя</string>
     <string name="save_seat_title_short">Память и восст.</string>
-    <string name="save_seat_title_short_drive">Память водит. сиденья</string>
+    <string name="save_seat_title_short_drive">Память сиденья</string>
     <string name="save_seat_title_short_passenger">Память пасс. сиденья</string>
     <string name="save_success">%s сохранено</string>
     <string name="save_success1">Сохранено</string>
@@ -262,7 +262,7 @@
     <string name="switch_driver_gear">Пожалуйста, переключитесь в режим Drive</string>
     <string name="switch_ica">Переключено на ICA.</string>
     <string name="switch_to_acc">Переключено на ACC.</string>
-    <string name="switch_to_comfort_cause_speed">Текущая скорость выше 40 км/ч, переключаю в комфортный режим</string>
+    <string name="switch_to_comfort_cause_speed">Текущая скорость выше 40 км/ч - переключение в режим "Комфорт"</string>
     <string name="switch_to_eco">Да</string>
     <string name="switch_to_eco_mode_query">"Текущий уровень заряда ниже порогового значения, переключиться в эко-режим?"</string>
     <string name="system_error">Автопилот недоступен. Системная ошибка.</string>
