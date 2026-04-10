@@ -75,19 +75,24 @@ Overlay-проекты лежат в [`source code`](../source%20code).
 
 ## 6. Куда добавлять перевод
 
-Основные места:
+Редактируйте только канонический файл приложения:
 
-- `app/src/main/res/values/strings.xml`
-- `app/src/main/res/values-en/strings.xml`
-- `app/src/main/res/values-zh/strings.xml`
-- `app/src/main/res/xml/overlays.xml`
+- `translations/<app>/strings.xml`
 
 Обычно:
 
-- в `strings.xml` лежат сами переводы
+- в `translations/<app>/strings.xml` лежат сами переводы
 - в `overlays.xml` задаётся соответствие штатным строкам приложения
 
-Если нужной строки ещё нет, добавьте её в `strings.xml` и привяжите в `overlays.xml`.
+Если нужной строки ещё нет, добавьте её в `translations/<app>/strings.xml` и при необходимости привяжите в `source code/<project>/app/src/main/res/xml/overlays.xml`.
+
+Не редактируйте вручную:
+
+- `source code/<project>/app/src/main/res/values/strings.xml`
+- `source code/<project>/app/src/main/res/values-en/strings.xml`
+- `source code/<project>/app/src/main/res/values-zh/strings.xml`
+
+Эти файлы генерируются скриптами перед сборкой из `translations/<app>/strings.xml`.
 
 ## 7. Правило по длине строки
 
@@ -99,24 +104,34 @@ Overlay-проекты лежат в [`source code`](../source%20code).
 
 ## 8. Локальная сборка
 
-Каждый overlay-проект собирается отдельно. Пример:
+Для локальной проверки на автомобиле используйте один пользовательский entrypoint:
 
 ```powershell
-cd "source code\\ruvoyahoverlaysetting"
-.\gradlew.bat assembleDebug --no-daemon
+.\scripts\build-overlay.ps1 -App setting
+```
+
+Этот скрипт:
+
+- берёт `translations/setting/strings.xml`
+- автоматически раскладывает его в три папки `values*`
+- собирает нужный overlay APK
+
+Каждый overlay-проект по-прежнему собирается отдельно. Пример результата для `setting`:
+
+```powershell
+.\scripts\build-overlay.ps1 -App setting
 ```
 
 Или на macOS/Linux:
 
 ```bash
-cd "source code/ruvoyahoverlaysetting"
-./gradlew assembleDebug --no-daemon
+pwsh ./scripts/build-overlay.ps1 -App setting
 ```
 
 Готовый APK окажется в:
 
 ```text
-app/build/outputs/apk/debug/
+source code/ruvoyahoverlaysetting/app/build/outputs/apk/debug/
 ```
 
 ## 9. Preview в рамках PR

@@ -36,6 +36,12 @@
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [docs/contributor-guide.md](docs/contributor-guide.md)
 
+Коротко:
+
+- редактируйте только `translations/<app>/strings.xml`
+- не редактируйте вручную `source code/<project>/app/src/main/res/values*/strings.xml`, эти файлы генерируются скриптами
+- для локальной проверки перед установкой на автомобиль используйте `.\scripts\build-overlay.ps1 -App <app>`
+
 ## Релизы
 
 - В `main` попадают только изменения после review.

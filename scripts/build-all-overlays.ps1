@@ -2,25 +2,19 @@ $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$projects = @(
-    "ruvoyahoverlaybluetoothphone",
-    "ruvoyahoverlaydvr",
-    "ruvoyahoverlayhiboard",
-    "ruvoyahoverlaylauncher",
-    "ruvoyahoverlaysetting",
-    "ruvoyahoverlayvehicle",
-    "ruvoyahoverlayvehiclesetting"
-)
+. (Join-Path $PSScriptRoot "translation-tools.ps1")
 
-foreach ($project in $projects) {
-    $projectRoot = Join-Path $repoRoot "source code\$project"
-    Write-Host "Building $project..."
+& (Join-Path $PSScriptRoot "sync-translations.ps1")
 
-    Push-Location $projectRoot
+foreach ($app in Get-TranslationApps) {
+    $context = Get-OverlayBuildContext -RepoRoot $repoRoot -App $app
+    Write-Host "Building $($context.Project)..."
+
+    Push-Location $context.ProjectRoot
     try {
         & .\gradlew.bat clean assembleDebug --no-daemon
         if ($LASTEXITCODE -ne 0) {
-            throw "Build failed for $project"
+            throw "Build failed for $($context.Project)"
         }
     }
     finally {

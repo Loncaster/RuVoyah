@@ -5,7 +5,11 @@ on:
     branches:
       - main
     paths:
+      - "translations/**"
       - "source code/**"
+      - "scripts/translation-tools.ps1"
+      - "scripts/sync-translations.ps1"
+      - "scripts/build-overlay.ps1"
       - "scripts/build-all-overlays.ps1"
       - "scripts/get-release-version.ps1"
       - "scripts/package-release.ps1"
