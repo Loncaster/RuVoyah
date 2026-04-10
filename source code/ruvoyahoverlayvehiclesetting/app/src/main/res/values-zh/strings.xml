@@ -92,7 +92,7 @@
     <string name="battery_temp_adjust_info">Термоподготовка батареи расходует часть заряда, но повышает эффективность зарядки. Рекомендуется включать по пути к станции быстрой зарядки.</string>
     <string name="battery_temp_adjust_low_soc">Слишком низкий заряд батареи, термоподготовка недоступна.</string>
     <string name="battery_temp_adjust_not_meet">Температура ячеек уже в подходящем диапазоне, термоподготовка не требуется.</string>
-    <string name="battery_temp_warn_content">Функция расходует небольшое количество энергии. При необходимости заряд можно пополнить на зарядной станции.</string>
+    <string name="battery_temp_warn_content">Расходует немного энергии. Заряд можно пополнить на станции.</string>
     <string name="battery_temp_warn_know">Понятно</string>
     <string name="battery_temp_warn_name">Предподготовка включена</string>
     <string name="charge_battery_pre">Контроль темп. батареи</string>
