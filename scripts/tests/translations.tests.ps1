@@ -55,6 +55,40 @@ Describe 'translation tools' {
         }
     }
 
+    It 'creates missing destination folders before copying translations' {
+        . "$PSScriptRoot/../translation-tools.ps1"
+
+        $tempRoot = Join-Path $env:TEMP ('ruvoyah-sync-missing-dir-test-' + [guid]::NewGuid().ToString('N'))
+        $repoRoot = Join-Path $tempRoot 'repo'
+        $translationsDir = Join-Path $repoRoot 'translations/setting'
+        $resourceRoot = Join-Path $repoRoot 'source code/ruvoyahoverlaysetting/app/src/main/res'
+
+        try {
+            New-Item -ItemType Directory -Force $translationsDir | Out-Null
+            New-Item -ItemType Directory -Force $resourceRoot | Out-Null
+
+            $content = @'
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Настройки</string>
+</resources>
+'@
+            Set-Content -LiteralPath (Join-Path $translationsDir 'strings.xml') -Value $content -Encoding UTF8
+
+            Sync-TranslationResources -RepoRoot $repoRoot -App 'setting'
+
+            foreach ($folder in @('values', 'values-en', 'values-zh')) {
+                $target = Join-Path $resourceRoot "$folder/strings.xml"
+                Test-Path -LiteralPath $target | Should Be $true
+            }
+        }
+        finally {
+            if (Test-Path $tempRoot) {
+                Remove-Item -LiteralPath $tempRoot -Recurse -Force
+            }
+        }
+    }
+
     It 'resolves every expected user-facing app name' {
         . "$PSScriptRoot/../translation-tools.ps1"
 

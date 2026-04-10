@@ -78,9 +78,7 @@ function Sync-TranslationResources {
         $resourceRoot = Join-Path $context.ProjectRoot "app/src/main/res"
         foreach ($folder in @("values", "values-en", "values-zh")) {
             $destinationDir = Join-Path $resourceRoot $folder
-            if (-not (Test-Path -LiteralPath $destinationDir)) {
-                throw "Missing destination directory: $destinationDir"
-            }
+            New-Item -ItemType Directory -Path $destinationDir -Force | Out-Null
 
             Copy-Item -LiteralPath $sourcePath -Destination (Join-Path $destinationDir "strings.xml") -Force
         }
