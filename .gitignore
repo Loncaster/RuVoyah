@@ -22,3 +22,8 @@ Thumbs.db
 
 # Local agent notes
 AGENTS.md
+
+# Generated translation resource copies
+source code/*/app/src/main/res/values/strings.xml
+source code/*/app/src/main/res/values-en/strings.xml
+source code/*/app/src/main/res/values-zh/strings.xml
