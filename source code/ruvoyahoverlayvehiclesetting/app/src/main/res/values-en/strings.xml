@@ -85,6 +85,13 @@
     <string name="auto_parking_deep_hint">Нажмите на педаль тормоза до полной остановки, затем плавно отпустите и нажмите снова для активации функции.</string>
     <string name="auto_parking_hint">Нажмите на педаль тормоза до полной остановки автомобиля для автоматической активации функции.</string>
     <string name="auto_parking_title">Стояночный тормоз</string>
+    <string name="battery_temp">Температура батареи</string>
+    <string name="battery_temp_adjust">Подготовка</string>
+    <string name="battery_temp_adjust_charge_state">Кабель подключен, термоподготовка недоступна.</string>
+    <string name="battery_temp_adjust_hv_off">Высоковольтная система не запитана, термоподготовка недоступна.</string>
+    <string name="battery_temp_adjust_info">Термоподготовка батареи расходует часть заряда, но повышает эффективность зарядки. Рекомендуется включать по пути к станции быстрой зарядки.</string>
+    <string name="battery_temp_adjust_low_soc">Слишком низкий заряд батареи, термоподготовка недоступна.</string>
+    <string name="battery_temp_adjust_not_meet">Температура ячеек уже в подходящем диапазоне, термоподготовка не требуется.</string>
     <string name="charge_battery_pre">Контроль темп. батареи</string>
     <string name="charge_battery_pre_active">Контроль темп. батареи активен</string>
     <string name="charge_battery_pre_desc">В холодную/жаркую погоду эта функция регулирует температуру батареи до оптимального уровня для улучшения производительности. Используйте, когда зарядный кабель не подключен, а уровень заряда батареи выше 10%.</string>
@@ -98,6 +105,8 @@
     <string name="charge_gun_no_extract_solution">Решения, если зарядный кабель не извлекается:</string>
     <string name="charge_gun_no_extract_trunk_unlock">Разблокируйте вручную с помощью троса в багажнике</string>
     <string name="charge_gun_no_extract_unlock">Разблок. кабель</string>
+    <string name="charge_navigation_in_progress_content">Мощность зарядки зависит от температуры и уровня заряда батареи, а также от максимальной мощности станции. Термоподготовка повышает эффективность зарядки, но расходует часть заряда. Рекомендуется включать ее за полчаса до зарядки. При навигации к станции зарядки функция включается автоматически, чтобы подготовить батарею и повысить мощность зарядки.</string>
+    <string name="charge_navigation_in_progress_name">Подготовка по навигации</string>
     <string name="charge_mes_handle_toast">Слишком частые операции. Повторите попытку позже.</string>
     <string name="charge_not_started">Не заряжается</string>
     <string name="charge_port_opened">Открытие лючка зарядки</string>
@@ -269,7 +278,9 @@
     <string name="light_headlamp_moderate">Умеренно</string>
     <string name="light_headlamp_title">Регулировка фар</string>
     <string name="light_intelligent_remote_control">Автодальний</string>
+    <string name="light_Approach_vehicle_Bluetooth_key">Включать наружное освещение при приближении к автомобилю с Bluetooth-ключом</string>
     <string name="light_welcome">Приветственное освещение</string>
+    <string name="light_welcome_approachlights">Освещение при приближении</string>
     <string name="light_welcome_mode1">Радость</string>
     <string name="light_welcome_mode2">Восторг</string>
     <string name="light_welcome_mode3">Сияние</string>
